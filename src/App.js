@@ -61,7 +61,18 @@ class ClassComp extends React.Component {
     number: this.props.initNumber,
     date: new Date().toString(),
   };
+  componentWillMount() {
+    console.log("class => componentWillMount");
+  }
+  componentDidMount() {
+    console.log("class => componentDidMount");
+  }
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log("class => shouldComponentUpdate");
+    return true;
+  }
   render() {
+    console.log("class => render");
     return (
       <div className="container">
         <h2>class style component</h2>
